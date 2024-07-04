@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="css/styles-tasks.css">
+</head>
+<body>
+    <header>
+        <h1>Task List</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <div class="filters">
+                <label for="filterPriority">Filter by Priority</label>
+                <select id="filterPriority">
+                    <option value="">All</option>
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                </select>
+                
+                <label for="filterStatus">Filter by Status</label>
+                <select id="filterStatus">
+                    <option value="">All</option>
+                    <option value="1">Not Started</option>
+                    <option value="2">In Progress</option>
+                    <option value="3">Completed</option>
+                </select>                             
+                <button id="filterButton">Filter</button>
+                <button id="createTaskButton">Create Task</button>
+            </div>
+            <div class="task-grid">
+                <div id="taskList" class="task-grid-body"></div>
+                <div id="emptyMessage" class="empty-message" style="display: none;">No tasks found.</div>
+            </div>
+            <div id="pagination"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Task Management</p>
+    </footer>
+    <script type="module" src="js/main/listTasks.js"></script>
+    <script>
+        document.getElementById('createTaskButton').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

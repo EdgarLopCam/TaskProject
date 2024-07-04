@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    flex: 1;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select,
+.form-group button {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.filters label {
+    margin-top: 1em;
+}
+
+input, textarea, select, button {
+    margin-top: 0.5em;
+    padding: 0.5em;
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.task-grid-header, .task-grid-body {
+    display: contents;
+}
+
+.task-grid-cell {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+}
+
+.task-grid-header .task-grid-cell {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+.task-grid-body .task-grid-cell {
+    background-color: #fff;
+}
+
+.task-grid-body .task-grid-row:hover {
+    background-color: #f9f9f9;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em;
+    color: #888;
+}
+
+#pagination {
+    margin-top: 1em;
+    text-align: center;
+}
+
+#pagination button {
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#pagination button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .task-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .task-grid-cell {
+        text-align: center;
+    }
+}

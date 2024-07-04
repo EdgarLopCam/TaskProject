@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Create Task</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="create-task-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority" required>
+                        <option value="" disabled selected>Select priority</option>
+                        <option value="1">Low</option>
+                        <option value="2">Medium</option>
+                        <option value="3">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option value="" disabled selected>Select status</option>
+                        <option value="1">Not Started</option>
+                        <option value="2">In Progress</option>
+                        <option value="3">Completed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" name="dueDate" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Create Task</button>
+                </div>
+            </form>
+            <div id="message"></div>
+            <div class="form-group">
+                <button id="view-tasks-button">View Tasks</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Task Management</p>
+    </footer>
+    <script type="module" src="js/main/createTask.js"></script>
+    <script>
+        document.getElementById('view-tasks-button').addEventListener('click', function() {
+            window.location.href = 'tasks.html';
+        });
+    </script>
+</body>
+</html>

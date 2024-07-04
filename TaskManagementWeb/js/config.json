@@ -1,0 +1,5 @@
+{
+    "apiUrl": "https://localhost:7150/api/v1/",
+    "pageSize": 10,
+    "defaultPage": 1
+}
